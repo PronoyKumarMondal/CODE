@@ -20,6 +20,7 @@ int main()
         s=y-x;
         cout<<x<<" ";
         cout<<(s/2)<<endl;
+        
     }
  
     return 0;
