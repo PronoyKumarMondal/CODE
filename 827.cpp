@@ -8,11 +8,11 @@ int main()
     {
         int n, r = 0;
         
-        string s;
+        string p;
         for (int i = 0; i < 8; i++)
         {
-            cin >> s;
-            if (s == "RRRRRRRR")
+            cin >> p;
+            if (p == "RRRRRRRR")
                 {r = 1;}
         }
         if (r == 1)
