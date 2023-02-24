@@ -6,7 +6,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        int a, b, c = 0, i = 10;
+        int a, b, c = 0, n;
         cin >> a >> b;
         if (a == b)
         {
@@ -14,50 +14,27 @@ int main()
         }
         else
         {
-            if (a > b)
+            if (b > a)
             {
-                while (1)
-                {
-                    if (a == b)
-                    {
-                        break;
-                    }
-
-                    if ((a - i) >= b)
-                    {
-                        a -= i;
-                        c++;
-                    }
-                    if ((a - b) < i)
-                    {
-                        i--;
-                    }
-                }
-
-                cout << c << endl;
+                int temp = a;
+                a = b;
+                b = temp;
             }
-            else
+            n = (a - b);
+           
+            for (int i = 10; i > 0; i--)
             {
-                while (1)
+                if (n >= i)
                 {
-                    if (a == b)
-                    {
-                        break;
-                    }
-
-                    if ((a + i) <= b)
-                    {
-                        a += i;
-                        c++;
-                    }
-                    if ((b - a) < i)
-                    {
-                        i--;
-                    }
+                    c += (n / i);
+                    n = (n % i);
                 }
-
-                cout << c << endl;
+                if(n==0)
+                {
+                    break;
+                }
             }
+            cout<<c<<endl;
         }
     }
 
