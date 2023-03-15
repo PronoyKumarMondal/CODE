@@ -6,9 +6,9 @@ int main()
     cin >> t;
     while (t--)
     {
-        int x, y, n, k;
+        int x, y, n, k=0;
         cin >> x >> y >> n;
-        for (int i = (n - 1); i > 0; i--)
+        for (int i =n ; i > 0; i--)
         {
             if (i % x == y)
             {
