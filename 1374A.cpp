@@ -6,17 +6,11 @@ int main()
     cin >> t;
     while (t--)
     {
-        int x, y, n, k=0;
+        int x, y, n, k;
         cin >> x >> y >> n;
-        for (int i =n ; i > 0; i--)
-        {
-            if (i % x == y)
-            {
-                k = i;
-                break;
-            }
-        }
-        cout << k << endl;
+        k=((n-y)/x);
+        int a=((k*x)+y);
+        cout<<a<<endl;
     }
 
     return 0;
