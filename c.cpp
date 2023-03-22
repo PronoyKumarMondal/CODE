@@ -10,24 +10,38 @@ int main()
         cin>>n;
         string s;
         cin>>s;
+        int a[n];
         for(int i=0;i<n;i++){
            if(s[i]=='a'){
-            s[i]=0;
+            
+            a[i]=0;
            }
-           if(s[i]=='b'){
-              s[i]=1;
+           else if(s[i]=='b'){
+              a[i]=1;
            }
-           if(s[i]=='c'){
-            s[i]=1;
+           else if(s[i]=='c'){
+            a[i]=1;
+           }
+           else{
+            a[i]=3;
            }
         }
+        
         for(int i=0;i<n;i++){
-           if(s[i]!=0 && s[i]!=1){
+            if (n<=2){
+                if(a[i]==1){
+                    f=0;
+                }
+                else{
+                    f=1;
+                }
+            }
+           if(a[i]==3){
               f=1;
               break;
            }
         }
-        if(f==1){
+        if(f==0){
            cout<<"YES"<<endl; 
         }
         else{
