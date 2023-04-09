@@ -12,12 +12,14 @@ int main()
     int i = 0, j = n - 1, s = 0, d = 0, c = 0;
     while (1)
     {
-        if(i==n-1 || j==0){
-            break;
-        }
+       
         if (c % 2 == 0 || c == 0)
-        {
-            if (a[i] > a[j])
+        { 
+            if(i==j){
+                s+=a[i];
+                break;
+            }
+            else if (a[i] > a[j])
             {
                 s += a[i];
                 i++;
@@ -30,7 +32,11 @@ int main()
         }
         else
         {
-            if (a[i] > a[j])
+            if(i==j){
+                d+=a[i];
+                break;
+            }
+            else if (a[i] > a[j])
             {
                 d += a[i];
                 i++;
