@@ -2,10 +2,9 @@
 using namespace std;
 int main()
 {
-    int h,l;
-    cin>>h>>l;
-    cout<<10-h<<" "<<10-l;
-
+    int a,b;
+    cin>>a>>b;
+    cout<<a+b<<endl;
 
 
     return 0;
