@@ -11,7 +11,7 @@ int main()
             cout<<(a-c)<<endl;
         }
 
-        else{
+        else{ 
             cout<<(a-b)<<endl;
 
         }
@@ -41,8 +41,6 @@ int main()
           }
 
     }
-
-
 
     return 0;
 }
